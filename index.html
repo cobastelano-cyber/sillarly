@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chairly — Prueba tu silla en tu espacio</title>
+  </head>
+  <body>
+    <header class="top">
+      <span class="logo">Chairly</span>
+      <span class="tag">Realidad aumentada</span>
+    </header>
+
+    <main>
+      <nav id="tabs" class="tabs" aria-label="Sillas"></nav>
+
+      <section class="stage">
+        <model-viewer
+          id="visor"
+          alt="Silla en 3D"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          ar-scale="fixed"
+          camera-controls
+          auto-rotate
+          shadow-intensity="1"
+          touch-action="pan-y"
+        >
+          <button slot="ar-button" class="btn-ar">Ver en tu espacio</button>
+          <p id="error" class="error" hidden>No se pudo cargar el modelo.</p>
+        </model-viewer>
+      </section>
+
+      <section class="info">
+        <div class="row">
+          <h1 id="nombre"></h1>
+          <span id="precio" class="precio"></span>
+        </div>
+        <p id="categoria" class="cat"></p>
+
+        <p class="label">Color</p>
+        <div id="colores" class="swatches"></div>
+
+        <p class="label">Acabado</p>
+        <div class="seg">
+          <button data-rug="0.3" class="on">Piel</button>
+          <button data-rug="0.85">Tela</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

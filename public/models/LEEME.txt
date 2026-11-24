@@ -1,0 +1,2 @@
+Coloca aquí tus 3 modelos con estos nombres:
+silla1.glb, silla2.glb, silla3.glb
